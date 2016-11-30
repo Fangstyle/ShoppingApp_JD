@@ -1,0 +1,164 @@
+[class^="icon-sprite-"],
+[class*=" icon-sprite-"]{
+    background: url("../images/sprites.png") no-repeat ;
+    background-size: 200px;
+}
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei",sans-serif;/*第二个是手机的一个默认的字体*/
+    color: #000;
+}
+
+.jd-style{
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+/*头部开始*/
+.head-fixed{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    height:40px;
+    z-index: 999;
+}
+.head-content{
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 40px;
+    background-color: rgba(201,21,35,0.85);
+    position: relative;
+}
+.head-content > .head-left{
+    margin-left: 10px;
+    float: left;
+    margin-top: 2px;
+}
+.head-content > .head-left >h1 {
+    height:0;
+    text-indent: -2000px;
+}
+.head-content > .head-left >a{
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-position: 0 -103px;
+}
+.head-content > .head-search{
+    width: 100%;
+}
+.head-content > .head-search >form {
+    -webkit-box-sizing: border-box;/*以你的border开始计算你的宽度*/
+    width: 100%;
+    height:40px;
+    padding-left: 75px;
+    padding-right: 55px;
+    position: relative;
+}
+.head-content > .head-search >form >input{
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height:30px;
+    padding-left: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    box-shadow: none;
+}
+.head-content>.head-search > form > i{
+    background-position:-60px -110px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 85px;
+}
+.head-content>.head-login>a{
+    width: 50px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*头部结束*/
+/*轮播图开始*/
+#ad_banner{
+    width:100%;
+    overflow: hidden;
+}
+#ad_banner>ul{
+    width: 800%;
+    position: relative;
+}
+#ad_banner > ul > a{
+    display: block;
+}
+#ad_banner > ul > li {
+     width: 12.5%;
+     float: left;
+ }
+#ad_banner > ul > li > a > img {
+    width: 100%;
+    float: left;
+}
+#ad_banner > ol{
+    width: 135px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    margin-left: -59px;
+    bottom: 10px;
+}
+#ad_banner > ol > li{
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    float: left;
+}
+#ad_banner > ol > li+li{
+    margin-left: 10px;
+}
+/*轮播图结束*/
+/*产品分类开始*/
+#category{
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 3.125%;
+    background: #fff;
+    padding-top: 11px;
+}
+#category > ul {
+    width: 100%;
+}
+#category > ul > li{
+    width: 25%;
+    height:69px;
+    float: left;
+}
+#category > ul > li > a > div{
+    text-align: center;
+    width: 100%;
+}
+#category > ul > li > a > div > img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+#category > ul > li > a > div > span{
+    font-size: 13px;
+    color: #666;
+    margin: 0 auto;
+}
+
+/*产品分类结束*/

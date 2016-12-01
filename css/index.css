@@ -7,6 +7,7 @@ body{
     font-size: 14px;
     font-family: "Microsoft YaHei",sans-serif;/*第二个是手机的一个默认的字体*/
     color: #000;
+    background-color: #F5F5F5;
 }
 
 .jd-style{
@@ -14,6 +15,7 @@ body{
     max-width: 640px;
     margin: 0 auto;
     position: relative;
+
 }
 /*头部开始*/
 .head-fixed{
@@ -133,7 +135,6 @@ body{
     height: 150px;
     width: 100%;
     border-bottom: 1px solid #e0e0e0;
-    padding: 0 3.125%;
     background: #fff;
     padding-top: 11px;
 }
@@ -160,5 +161,179 @@ body{
     color: #666;
     margin: 0 auto;
 }
-
 /*产品分类结束*/
+/*秒杀页面开始*/
+#cecond-kill{
+    width: 100%;
+    margin: 8px 0px 0 0px;
+    background-color: #fff;
+}
+/*秒杀头部*/
+#cecond-kill > .kill-top{
+    width: 100%;
+    position: relative;
+    height: 32px;
+}
+#cecond-kill > .kill-top > .kill-top-left{
+    float: left;
+}
+#cecond-kill > .kill-top > .kill-top-left > i{
+    background: url("../images/seckill-icon.png") no-repeat;
+    background-size: 16px 20px;
+    width: 16px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin: 6px 0 8px 8px ;
+}
+#cecond-kill > .kill-top > .kill-top-left > h4{
+    font: 15px/35px 'microsoft yahei sans-serif';
+    color: #d8505c;
+    float: left;
+    margin-left: 8px;
+}
+#cecond-kill > .kill-top > .kill-to-mid {
+    float: left;
+    margin-left: 10px;
+}
+#cecond-kill > .kill-top > .kill-to-mid > .time-num{
+    float:  left;
+    display: block;
+    width:15px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    float: left;
+    line-height: 20px;
+    margin: 8px 0 0 3px;
+}
+#cecond-kill > .kill-top > .kill-to-mid > .time-excision{
+    float:  left;
+    display: block;
+    width:6px;
+    line-height: 20px;
+    text-align: center;
+    margin: 8px 0 0 3px;
+}
+#cecond-kill > .kill-top > .kill-top-right{
+    float: right;
+    margin-right: 10px;
+}
+#cecond-kill > .kill-top > .kill-top-right > a{
+    line-height: 32px;
+    color:#000 ;
+}
+/*秒杀底部*/
+#cecond-kill > .kill-bottom {
+    width: 100%;
+}
+#cecond-kill > .kill-bottom >.kill-product >ul {
+    width: 100%;
+    float: left;
+}
+#cecond-kill > .kill-bottom >.kill-product > ul >li {
+    width: 33.33%;
+    float: left;
+}
+#cecond-kill > .kill-bottom >.kill-product > ul >li > a{
+    display: block;
+    width: 100%;
+}
+#cecond-kill > .kill-bottom  .kill-product-detial{
+    width: 100%;
+}
+#cecond-kill > .kill-bottom >.kill-product > ul >li +li .kill-product-detial {
+    border-left: 1px solid #c0c0c0;
+}
+#cecond-kill > .kill-bottom .kill-product-detial > img {
+    width: 68%;
+    display: block;
+    margin: 0 auto;
+}
+#cecond-kill > .kill-bottom  .now-price{
+    text-align: center;
+    color:#DF505C;
+    font: 12px/20px "microsoft yahei sans-serif";
+}
+#cecond-kill > .kill-bottom .old-price{
+    text-align: center;
+    color:#000;
+    text-decoration: line-through;
+    font: 12px/20px "microsoft yahei sans-serif";
+}
+/*热门产品*/
+#hot{
+    width: 100%;
+    margin-top: 8px;
+}
+#value-shop{
+    width: 100%;
+    margin-top: 8px;
+}
+/*提取公共样式，其他与之相同加相应类名即可*/
+/*超值购和热门产品用了一套布局*/
+ .common-product-title{
+     height: 32px;
+     border-bottom:1px solid #e0e0e0;
+     position: relative;
+     background-color: #fff;
+ }
+ .common-product-title h3{
+     font-size: 15px;
+     color: #666;
+     padding-left: 15px;
+     font-weight: inherit;
+     line-height: 32px;
+ }
+.common-product-title h3::before{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 12px;
+    background: #d8505c;
+
+    position: absolute;
+    top: 10px;
+    left: 8px;
+}
+ .common-product-detail{
+    width: 100%;
+}
+.common-product-left{
+    width: 50%;
+    float: left;
+}
+/*左边的大图片a*/
+.common-product-right{
+    width: 50%;
+    float: right;
+}
+.common-product-right a{
+     display: block;
+     width: 100%;
+     float: right;
+ }
+.common-product-left a{
+    display: block;
+    width: 100%;
+    float: right;
+}
+.common-product-left img{
+    width: 100%;
+}
+.common-product-right img{
+    width: 100%;
+}
+/*左边框*/
+.cb_left{
+    border-left: 1px solid #e0e0e0;
+}
+/*右边框*/
+.cb_right{
+    border-right: 1px solid #e0e0e0;
+}
+/*下边框*/
+.cb_bottom{
+    border-bottom: 1px solid #e0e0e0;
+}
+/*秒杀页面结束*/

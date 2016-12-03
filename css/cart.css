@@ -1,0 +1,229 @@
+[class^="icon-sprite-"],
+[class*=" icon-sprite-"]{
+    background: url("../images/sprites.png") no-repeat ;
+    background-size: 200px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: #F5F5F5;
+}
+/*标题栏开始*/
+#commen-top-search{
+    box-sizing: border-box; // width为最终盒子的宽度， padding和margin都在内部
+height: 45px;
+    width : 100%;
+    padding:0 40px;
+    border-bottom:1px solid #E0E0E0;
+    background: url("../images/header-bg.png") repeat-x;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+#commen-top-search > .search-back{
+    float: left;
+}
+#commen-top-search > .search-back > a {
+    box-sizing: border-box;
+    display: block;
+    width: 40px;
+    height:40px;
+    background-position: -20px 0px;
+    margin-left: -40px;
+    padding:10px 10px;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+#commen-top-search > .search-menu{
+    float: right;
+    margin-right: -40px;
+}
+#commen-top-search > .search-menu > a {
+    box-sizing: border-box;
+    display: block;
+    width: 20px;
+    height:20px;
+    background-position: -60px 0px;
+    margin:10px 10px;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+
+#commen-top-search > .search-input {
+    width: 100%;
+    height: 45px;
+    float: left;
+    text-align: center;
+}
+#commen-top-search > .search-input > h2{
+    font: 22px/45px 'microsoft yahei sans-serif'
+}
+/*标题栏结束*/
+/*安全购物开始*/
+#safe-notify{
+    width: 100%;
+    height: 35px;;
+    margin-top: 45px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+#safe-notify > span{
+    font: 15px/35px 'microsoft yahei sans-serif' ;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 19px;
+}
+#safe-notify > span::before{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/safe_icon.png") no-repeat;
+    background-size: 18px 18px;
+    position: absolute;
+    top: -2px;
+    left: 0px;
+}
+/*安全购物结束*/
+/*购物列表开始*/
+.cart-item-head{
+    width: 100%;
+    background-color: #fff;
+    height: 35px;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 10px;
+}
+.cart-item-head > .taggle-icon{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    display: block;
+    background: url("../images/shop-icon.png") no-repeat;
+    background-size: 50px 100px;
+}
+.cart-item-head > .good-supply{
+    box-sizing: border-box;
+    padding-left: 40px;
+    float: left;
+}
+.cart-item-head > .good-supply > span {
+    font: 13px/35px 'microsoft yahei sans-serif' ;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 2px;
+}
+.cart-item-head > .good-supply > img{
+    width: 15px;
+    height: 13px;
+    display: block;
+    margin-top: 11px;
+    float: left;
+}
+.cart-item-head > .good-free-transmation span{
+    float: right;
+    font-size: 13px;
+    color: #F15353;
+    margin-right: 5px;
+    line-height: 35px;
+}
+.cart-item-body{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+}
+.cart-item-body > .item-taggle{
+    position: absolute;
+    top :35px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    display: block;
+    background: url("../images/shop-icon.png") no-repeat;
+    background-size: 50px 100px;
+}
+.cart-item-taggled{
+    background-position: -25px 0;
+    background-position: -25px 0;
+}
+.cart-item-body > .item-detail{
+    width:100%;
+    box-sizing: border-box;
+    padding:  10px 10px 10px 50px;
+    background-color: #fff;
+}
+.cart-item-body > .item-detail > .detail-info {
+    float: left;
+    height: 80px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #666;
+}
+.cart-item-body > .item-detail  >img{
+    height: 80px;
+    width: 80px;
+    border: 1px solid #e0e0e0;
+    display: block;
+    margin-right: 10px;
+    float: left;
+}
+.cart-item-body > .item-detail > .detail-info > a{
+    font-size: 13px;
+    line-height: 15px;
+    height: 30px;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    overflow: hidden;
+    color: #666666;
+    display: block;
+}
+.cart-item-body > .item-detail > .detail-info > .num-tool .sub
+,.cart-item-body > .item-detail > .detail-info > .num-tool .add
+,.cart-item-body > .item-detail > .detail-info > .num-tool .num{
+height: 24px;
+width: 32px;
+border: 1px solid #e0e0e0;
+line-height: 24px;
+text-align: center;
+font-size: 14px;
+display: block;
+float: left;
+}
+.cart-item-body > .item-detail > .detail-info > .price{
+    display: block;
+    margin-bottom: 3px;
+}
+.cart-item-body > .item-detail > .detail-info > .num-tool > .num{
+    margin: 0 -1px 0 -1px;
+}
+.cart-item-body > .item-detail > .detail-info > .num-tool > .delete{
+    float: right;
+    margin-right: 5px;
+}
+.cart-item-body > .item-detail > .detail-info > .num-tool > .delete > .bgc-top{
+    width: 20px;
+    height: 5px;
+    background: url("../images/delete_up.png");
+    background-size: 20px 5px;
+    display: block;
+    margin-left: -1px
+}
+.cart-item-body > .item-detail > .detail-info > .num-tool > .delete > .bgc-bottom{
+    width: 18px;
+    height: 18px;
+    background: url("../images/delete_down.png");
+    background-size: 18px 18px;
+    display: block;
+    margin-top: -3px;
+}
+#cart-product-item  ul> li{
+    border-bottom: 2px solid #e0e0e0;
+}
+/*购物列表结束*/

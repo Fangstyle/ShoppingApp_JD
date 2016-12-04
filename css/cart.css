@@ -227,3 +227,65 @@ float: left;
     border-bottom: 2px solid #e0e0e0;
 }
 /*购物列表结束*/
+
+/*底部结算列表开始*/
+#cart-settle{
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1002;
+}
+#cart-settle > .cart-settle-left{
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+#cart-settle > .cart-settle-left >.seleted-icon{
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin: 20px 4px 0 10px;
+    float: left;
+    background: url("../images/shop-icon.png") no-repeat;
+    background-size: 50px 100px;
+}
+#cart-settle > .cart-settle-left >.text-seleted-all{
+    font: 500 13px/60px 'microsoft yahei sans-serif' ;
+    float: left;
+    color: white;
+}
+#cart-settle > .cart-settle-mid{
+    float: left;
+    height: 60px;
+}
+#cart-settle > .cart-settle-mid >.first{
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px 5px 4px 5px;
+}
+#cart-settle > .cart-settle-mid > .last{
+    font-size: 12px;
+    color: #AAAAAA;
+    margin: 0 5px;
+    font-weight: 600;
+}
+#cart-settle >.cart-settle-right{
+    float: right;
+
+}
+#cart-settle >.cart-settle-right > a{
+    color: #fff;
+    font-size: 18px;
+    line-height: 57px;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    width: 120px;
+    background-color: #F15353;
+}
+/*底部结算列表结束*/

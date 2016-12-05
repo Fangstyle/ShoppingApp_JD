@@ -83,6 +83,8 @@ body{
 #category-content > .category-left-menu > ul >li{
     line-height: 50px;
     text-align: center;
+    height: 50px;
+    width: 90px;
     border-right: 1px #E0E0E0 solid;
     border-bottom: 1px #E0E0E0 solid;
     border-radius: 2px;

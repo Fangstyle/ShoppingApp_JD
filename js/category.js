@@ -52,6 +52,7 @@ window.onload = function () {
         console.log("+++++++"+a);
     })
     oUl.addEventListener("touchend",function (e) {
+        //当手指离开屏幕时 ，初始化数据
         if(currentY+moveY>=150){
             addTransition();
             oUl.style.transform = "translateY("+(0)+"px)";

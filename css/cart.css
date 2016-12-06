@@ -160,7 +160,6 @@ height: 45px;
     background-color: #fff;
 }
 .cart-item-body > .item-detail > .detail-info {
-    float: left;
     height: 80px;
     overflow: hidden;
     font-size: 13px;

@@ -13,6 +13,8 @@ window.onload = function () {
     var endY  = 0; //滑动结束时的 坐标位置
     var currentY = 0; // 当前的左边位置
     var moveY =0;   // 滑动的距离 endY - startY
+    var startTime =0;
+    var endTime =0;
     var addTransition = function(){
         oUl.style.webkitTransition = "all .3s ease 0s";
         oUl.style.transition = "all .3s ease 0s";
@@ -24,10 +26,16 @@ window.onload = function () {
     };
     oUl.addEventListener('touchstart',function (e) {
         console.log(e);
+        console.log("****touchstart*****");
         startY = e.touches[0].clientY;
+        startTime = new Date().getTime();
     },false);
+    oUl.addEventListener('touchcancel',function(e){
+        alert(0);
+    });
     oUl.addEventListener("touchmove",function (e) {
         e.preventDefault();
+        console.log("****touchmove*****");
         endY = e.touches[0].clientY;
         moveY = endY -startY;
         //判断当前位置 是否是在可移动的区间
@@ -46,32 +54,58 @@ window.onload = function () {
             removeTransition();
             oUl.style.transform = "translateY("+(moveY+currentY)+"px)";
             oUl.style.webkitTransform = "translateY("+(moveY+currentY)+"px)";
+            currentY += moveY;
+            moveY = 0;
         }
 
         var a =-(oLiHeight-oParrentheight)-150;
-        console.log("+++++++"+a);
-    })
+    },false)
     oUl.addEventListener("touchend",function (e) {
         //当手指离开屏幕时 ，初始化数据
-        if(currentY+moveY>=150){
+        console.log("******touchend****");
+        endTime = new Date().getTime();
+        if (currentY + moveY >= 150) {
             addTransition();
-            oUl.style.transform = "translateY("+(0)+"px)";
-            oUl.style.webkitTransform = "translateY("+(0)+"px)";
+            oUl.style.transform = "translateY(" + (0) + "px)";
+            oUl.style.webkitTransform = "translateY(" + (0) + "px)";
             startY = 0;
             endY = 0;
             moveY = 0;
             currentY = 0;
         }
-        if (currentY+moveY<=-(oLiHeight-oParrentheight)-150){
+        if (currentY + moveY <= -(oLiHeight - oParrentheight) - 150) {
             addTransition();
-            oUl.style.transform = "translateY("+(-(oLiHeight-oParrentheight))+"px)";
-            oUl.style.webkitTransform = "translateY("+(-(oLiHeight-oParrentheight))+"px)";
+            oUl.style.transform = "translateY(" + (-(oLiHeight - oParrentheight)) + "px)";
+            oUl.style.webkitTransform = "translateY(" + (-(oLiHeight - oParrentheight)) + "px)";
+            console.log(-(oLiHeight - oParrentheight));
             startY = 0;
             endY = 0;
             moveY = 0;
-            currentY = -(oLiHeight-oParrentheight);
+            currentY = -(oLiHeight - oParrentheight);
         }
-      currentY+=moveY;
+        console.log(endTime - startTime < 200);
+        if (moveY == 0 && endTime - startTime < 200) {
+            console.log("+++++++++++++++++++++");
+            var parentNode = e.target.parentNode; //a的父级
+            var target = e.target; //这个是点击i的a
+            //清除class给点击的元素加上now
+            for (var i = 0; i < oLiList.length; i++) {
+                oLiList[i].index = i;
+                oLiList[i].className = " ";
+            }
+            parentNode.className ="category-selected";
+            var top =parentNode.index * 50;
+             if(top>oLiHeight - oParrentheight){
+             currentY=-(oLiHeight - oParrentheight);
+             moveY = 0;
+           }else{
+           addTransition();
+           oUl.style.webkitTransform = "translateY(" + (-top) + "px)";
+             currentY=-top;
+             moveY = 0;
+             }
+        }
+        currentY += moveY;
 
-    });
+},false)
 }

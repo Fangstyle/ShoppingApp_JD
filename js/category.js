@@ -86,7 +86,7 @@ window.onload = function () {
         console.log(endTime - startTime < 200);
         if (moveY == 0 && endTime - startTime < 200) {
             console.log("+++++++++++++++++++++");
-            var parentNode = e.target.parentNode; //a的父级
+            /*var parentNode = e.target.parentNode; //a的父级
             var target = e.target; //这个是点击i的a
             //清除class给点击的元素加上now
             for (var i = 0; i < oLiList.length; i++) {
@@ -103,9 +103,32 @@ window.onload = function () {
            oUl.style.webkitTransform = "translateY(" + (-top) + "px)";
              currentY=-top;
              moveY = 0;
-             }
+             }*/
         }
         currentY += moveY;
 
-},false)
+},false);
+    for (var i = 0; i < oLiList.length ; i++){
+        oLiList[i].index = i;
+        oLiList[i].onclick = function () {
+            //var parentNode = e.target.parentNode; //a的父级
+            //var target = e.target; //这个是点击i的a
+            //清除class给点击的元素加上now
+            for (var i = 0; i < oLiList.length; i++) {
+                oLiList[i].index = i;
+                oLiList[i].className = " ";
+            }
+            this.className ="category-selected";
+            var top =this.index * 50;
+            if(top>oLiHeight - oParrentheight){
+                currentY=-(oLiHeight - oParrentheight);
+                moveY = 0;
+            }else{
+                addTransition();
+                oUl.style.webkitTransform = "translateY(" + (-top) + "px)";
+                currentY=-top;
+                moveY = 0;
+            }
+        }
+    }
 }
